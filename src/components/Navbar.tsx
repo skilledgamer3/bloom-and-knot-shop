@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ShoppingBag, Flower2 } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useCart } from "@/lib/cart";
 import { BRAND } from "@/lib/config";
@@ -27,9 +27,11 @@ export function Navbar() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/15 text-primary transition-transform duration-300 group-hover:rotate-12">
-            <Flower2 className="h-5 w-5" />
-          </span>
+          <img
+            src="/products/knotandbloom.png"
+            alt={BRAND.name}
+            className="h-9 w-9 transition-transform duration-300 group-hover:scale-110"
+          />
           <span className="font-display text-xl font-semibold tracking-tight text-foreground">
             {BRAND.name}
           </span>

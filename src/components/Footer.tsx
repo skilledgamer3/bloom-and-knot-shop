@@ -1,4 +1,4 @@
-import { Instagram, MessageCircle, MapPin, Flower2 } from "lucide-react";
+import { Instagram, MessageCircle, MapPin } from "lucide-react";
 import { BRAND, INSTAGRAM_URL, WHATSAPP_NUMBER } from "@/lib/config";
 
 export function Footer() {
@@ -7,9 +7,11 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-5 py-14">
         <div className="flex flex-col items-center gap-6 text-center">
           <div className="flex items-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/15 text-primary">
-              <Flower2 className="h-5 w-5" />
-            </span>
+            <img
+              src="/products/knotandbloom.png"
+              alt={BRAND.name}
+              className="h-10 w-10"
+            />
             <span className="font-display text-2xl font-semibold text-foreground">
               {BRAND.name}
             </span>
