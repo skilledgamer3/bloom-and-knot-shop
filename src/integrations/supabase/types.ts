@@ -14,7 +14,178 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      leads: {
+        Row: {
+          created_at: string
+          id: string
+          interested_product: string | null
+          message: string | null
+          name: string
+          phone_number: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          interested_product?: string | null
+          message?: string | null
+          name: string
+          phone_number: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          interested_product?: string | null
+          message?: string | null
+          name?: string
+          phone_number?: string
+        }
+        Relationships: []
+      }
+      order_items: {
+        Row: {
+          id: string
+          order_id: string
+          price_snapshot: number
+          product_id: string | null
+          product_name: string
+          quantity: number
+        }
+        Insert: {
+          id?: string
+          order_id: string
+          price_snapshot?: number
+          product_id?: string | null
+          product_name: string
+          quantity?: number
+        }
+        Update: {
+          id?: string
+          order_id?: string
+          price_snapshot?: number
+          product_id?: string | null
+          product_name?: string
+          quantity?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "order_items_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      orders: {
+        Row: {
+          address: string
+          created_at: string
+          customer_name: string
+          id: string
+          items: Json
+          order_status: string
+          phone_number: string
+          shipping_fee: number
+          total_price_pkr: number
+          whatsapp_status: string
+        }
+        Insert: {
+          address: string
+          created_at?: string
+          customer_name: string
+          id?: string
+          items?: Json
+          order_status?: string
+          phone_number: string
+          shipping_fee?: number
+          total_price_pkr?: number
+          whatsapp_status?: string
+        }
+        Update: {
+          address?: string
+          created_at?: string
+          customer_name?: string
+          id?: string
+          items?: Json
+          order_status?: string
+          phone_number?: string
+          shipping_fee?: number
+          total_price_pkr?: number
+          whatsapp_status?: string
+        }
+        Relationships: []
+      }
+      product_images: {
+        Row: {
+          id: string
+          image_order: number
+          image_url: string
+          product_id: string
+        }
+        Insert: {
+          id?: string
+          image_order?: number
+          image_url: string
+          product_id: string
+        }
+        Update: {
+          id?: string
+          image_order?: number
+          image_url?: string
+          product_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_images_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      products: {
+        Row: {
+          category: string | null
+          created_at: string
+          description: string | null
+          id: string
+          main_image_url: string | null
+          material: string | null
+          price_pkr: number
+          product_name: string
+          product_slug: string
+          stock_quantity: number
+          tags: string[] | null
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          main_image_url?: string | null
+          material?: string | null
+          price_pkr?: number
+          product_name: string
+          product_slug: string
+          stock_quantity?: number
+          tags?: string[] | null
+        }
+        Update: {
+          category?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          main_image_url?: string | null
+          material?: string | null
+          price_pkr?: number
+          product_name?: string
+          product_slug?: string
+          stock_quantity?: number
+          tags?: string[] | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
