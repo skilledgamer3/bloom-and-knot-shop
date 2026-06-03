@@ -83,20 +83,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Knot & Bloom — Handmade Crochet Gifts" },
+      { title: "Knot & Bloom | Handmade Crochet Gifts" },
       {
         name: "description",
         content:
           "Tiny knots, blooming joy. Handmade crochet keychains, flowers and cozy accessories — soft, cute gifts crafted with love in Pakistan.",
       },
       { name: "author", content: "Knot & Bloom" },
-      { property: "og:title", content: "Knot & Bloom — Handmade Crochet Gifts" },
+      { property: "og:title", content: "Knot & Bloom | Handmade Crochet Gifts" },
       {
         property: "og:description",
         content: "Tiny knots, blooming joy. Handmade crochet gifts made with love.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Knot & Bloom | Handmade Crochet Gifts" },
+      { name: "description", content: "Knot & Bloom Boutique is a modern, aesthetic eCommerce website for handmade crochet gifts." },
+      { property: "og:description", content: "Knot & Bloom Boutique is a modern, aesthetic eCommerce website for handmade crochet gifts." },
+      { name: "twitter:description", content: "Knot & Bloom Boutique is a modern, aesthetic eCommerce website for handmade crochet gifts." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/GeE6GySO4qXPKonEOhK0jawl7KH3/social-images/social-1780447160846-ChatGPT_Image_Jun_3,_2026,_02_25_59_AM.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/GeE6GySO4qXPKonEOhK0jawl7KH3/social-images/social-1780447160846-ChatGPT_Image_Jun_3,_2026,_02_25_59_AM.webp" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
